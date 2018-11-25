@@ -2,6 +2,7 @@
 #include <string.h>
 
 int StringLen(char * str);
+void IsPalindrome(char * str);
 
 int main(void)
 {
@@ -9,21 +10,24 @@ int main(void)
 	char str[50];
 	printf("문자열 입력: ");
 	scanf("%s", str);
-	len = strlen(str);
+	IsPalindrome(str);
+	return 0;
+}
 
+void IsPalindrome(char * str)
+{
+	int i;
 	for (i = 0; i < StringLen(str) / 2; i++)
 	{
 		if (str[i] != str[StringLen(str) - 1 - i]) 
 		{
 			printf("회문이 아닙니다.\n");
-			return 0;
+			return;
 		}
 	}
 
 	if (i >= StringLen(str) / 2)
 		printf("회문 입니다. \n");
-
-	return 0;
 }
 
 int StringLen(char * str)
