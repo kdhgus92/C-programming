@@ -12,7 +12,12 @@ int main(void)
 		ch1 -= 32;
 		putchar(ch1);
 	}
-	else if (ch1 < 'A' || ch1 > 'Z')
+	else if (ch1 >= 'A' && ch1 <= 'Z')
+	{
+		ch1 += 32;
+		putchar(ch1);
+	}
+	else
 		printf("오류: 알파벳 입력!\n");
 	return 0;
 }
