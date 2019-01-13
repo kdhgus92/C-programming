@@ -17,12 +17,12 @@ int main()
 
 		if (arrlen == idx + 1) {
 			arrlen += 3;
-			arr = (int*)relloc(arr, sizeof(int)*arrlen);
+			arr = (int*)realloc(arr, sizeof(int)*arrlen);
 		}
 		idx++;
 	}
 	for (i = 0; i < idx; i++)
-		printf("%d", arr[i]);
+		printf("%d ", arr[i]);
 	free(arr);
 	return 0;
 }
