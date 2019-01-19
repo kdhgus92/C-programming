@@ -178,7 +178,7 @@ void StoreData(Person * parr, int num)
 	
 	for (i = 0; i < num; i++)
 	{
-		fprintf(file, "%s %s", parr[i].name, parr[i].phone);
+		fprintf(file, "%s %s ", parr[i].name, parr[i].phone);
 	}
 
 	fclose(file);
